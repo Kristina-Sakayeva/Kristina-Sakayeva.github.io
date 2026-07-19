@@ -261,4 +261,44 @@ footer p {
     footer {
         flex-direction: column;
     }
+    .hero-layout {
+
+        grid-template-columns: 1fr;
+
+        gap: 45px;
+
+    }
+
+    .headshot-container {
+
+        justify-content: flex-start;
+
+    }
+
+    .headshot {
+
+        width: min(100%, 280px);
+
+    }
+}
+.hero-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.7fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.headshot-container {
+    display: flex;
+    justify-content: center;
+}
+
+.headshot {
+    display: block;
+    width: min(100%, 340px);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
 }
