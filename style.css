@@ -334,6 +334,12 @@ section:not(.hero)::before {
     padding: 6px 0 0;
 }
 
+.research-entry + .research-entry {
+    margin-top: 36px;
+    padding-top: 36px;
+    border-top: 1px solid rgb(243 230 216 / 23%);
+}
+
 .entry-status {
     width: max-content;
     margin-top: 28px;
