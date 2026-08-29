@@ -309,7 +309,7 @@ section:not(.hero)::before {
 
 .section-heading h2 {
     position: relative;
-    padding-bottom: 24px;
+    padding-bottom: 32px;
 }
 
 .section-heading h2::after {
@@ -328,6 +328,110 @@ section:not(.hero)::before {
 
 .section-content > p {
     color: var(--muted);
+}
+
+.video-embed {
+    position: relative;
+    width: 100%;
+    max-width: 640px;
+    margin-top: 28px;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid var(--line);
+}
+
+.video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#personal {
+    position: relative;
+}
+
+#personal::after {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    margin-right: -50vw;
+    margin-left: -50vw;
+    background:
+        radial-gradient(circle at 90% 10%, rgb(154 101 91 / 16%), transparent 55%),
+        radial-gradient(circle at 4% 96%, rgb(182 138 104 / 14%), transparent 50%),
+        var(--cream);
+    content: "";
+}
+
+#personal .section-heading h2::after {
+    background: var(--rose);
+}
+
+#personal .video-embed {
+    border: 1px solid var(--rose);
+    box-shadow: 10px 10px 0 rgb(154 101 91 / 14%);
+}
+
+#personal .video-embed::after {
+    position: absolute;
+    top: -16px;
+    right: -14px;
+    color: var(--gold);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    content: "✦";
+}
+
+.rose-ornament {
+    position: absolute;
+    width: 76px;
+    height: auto;
+    fill: none;
+    stroke: var(--rose);
+    stroke-width: 1.3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    opacity: 0.55;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.rose-ornament--tl {
+    top: 14px;
+    left: -8px;
+    transform: scaleX(-1) rotate(-6deg);
+}
+
+.rose-ornament--br {
+    right: 2px;
+    bottom: 6px;
+    width: 56px;
+    transform: rotate(8deg);
+}
+
+#personal .sparkle {
+    position: absolute;
+    z-index: 0;
+    color: var(--gold);
+    font-family: var(--serif);
+}
+
+#personal .sparkle--large {
+    top: -14px;
+    right: 14%;
+    font-size: 1.4rem;
+}
+
+#personal .sparkle--small {
+    bottom: 30%;
+    left: 30%;
+    font-size: 0.75rem;
 }
 
 .research-entry {
