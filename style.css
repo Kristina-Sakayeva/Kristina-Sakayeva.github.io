@@ -349,6 +349,40 @@ section:not(.hero)::before {
     border: 0;
 }
 
+.timeline {
+    position: relative;
+    padding-left: 28px;
+}
+
+.timeline::before {
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    left: 4px;
+    width: 1px;
+    background: var(--line);
+    content: "";
+}
+
+.timeline-entry {
+    position: relative;
+}
+
+.timeline-entry + .timeline-entry {
+    margin-top: 28px;
+}
+
+.timeline-entry::before {
+    position: absolute;
+    top: 6px;
+    left: -28px;
+    width: 9px;
+    height: 9px;
+    background: var(--gold);
+    border-radius: 50%;
+    content: "";
+}
+
 #personal {
     position: relative;
 }
@@ -477,9 +511,21 @@ section:not(.hero)::before {
     letter-spacing: 0.12em;
 }
 
-.paper-entry p,
+#contributions .paper-entry p,
 .research-entry p {
     color: rgb(243 230 216 / 72%);
+}
+
+#projects .paper-year {
+    color: var(--rose);
+}
+
+#projects .paper-entry p:not(.paper-year) {
+    color: var(--muted);
+}
+
+#projects .paper-entry {
+    border-top-color: var(--line);
 }
 
 .paper-entry a {
@@ -489,9 +535,11 @@ section:not(.hero)::before {
     text-transform: uppercase;
 }
 
+#news,
 #research,
 #contributions,
-#contact {
+#contact,
+#coursework {
     color: var(--paper);
     background: var(--wine);
     box-shadow: 0 0 0 100vmax var(--wine);
@@ -499,24 +547,56 @@ section:not(.hero)::before {
     border-color: rgb(243 230 216 / 25%);
 }
 
+#news::before,
 #research::before,
 #contributions::before,
-#contact::before {
+#contact::before,
+#coursework::before {
     color: var(--gold);
     background: var(--wine);
 }
 
+#news .section-number,
 #research .section-number,
 #contributions .section-number,
 #contact .section-number,
+#news .entry-label,
 #research .entry-label {
     color: var(--gold);
 }
 
+#news .section-heading h2::after,
 #research .section-heading h2::after,
 #contributions .section-heading h2::after,
 #contact .section-heading h2::after {
     background: rgb(243 230 216 / 28%);
+}
+
+#news .timeline::before {
+    background: rgb(243 230 216 / 28%);
+}
+
+#coursework h2::before,
+#coursework h2::after {
+    background: rgb(243 230 216 / 28%);
+}
+
+#coursework .coursework-grid,
+#coursework .course-card {
+    border-color: rgb(243 230 216 / 25%);
+}
+
+#coursework .course-card h3 {
+    color: var(--paper);
+}
+
+#coursework .course-card h3::before,
+#coursework .course-card li::marker {
+    color: var(--gold);
+}
+
+#coursework .course-card ul {
+    color: rgb(243 230 216 / 72%);
 }
 
 .email-link {
